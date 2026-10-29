@@ -22,7 +22,8 @@
 |---|---|---|
 | `Agent(role, goal, backstory)` | `core/Agent` | ✅ 四段系统提示词 |
 | `Agent(tools=[...])` + 原生 function calling | `tool/Tool` + `ToolRegistry.specs()` | ✅ |
-| `Agent(max_iter, max_rpm)` | `Agent.maxIter` + `RateLimiter` | ✅ || `Task(description, expected_output, agent)` | `core/Task` | ✅ |
+| `Agent(max_iter, max_rpm)` | `Agent.maxIter` + `RateLimiter` | ✅ |
+| `Task(description, expected_output, agent)` | `core/Task` | ✅ |
 | `Task(output_pydantic=Model)` | `Task.outputType(POJO)` + `schema/Structure` | ✅ |
 | `Task(guardrail=..., max_retries=)` | `Task.guardrails(...)` + `core/Guardrails` | ✅ |
 | `Task(context=[...])` | `Task.context(...)` | ✅ |
