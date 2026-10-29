@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>io.example</groupId>
+  <artifactId>crewai-java-demo</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>CrewAI Java Demo</name>
+  <description>用纯 JDK 17 实现的 CrewAI 风格多智能体编排最小内核，模型走本地 Ollama</description>
+
+  <properties>
+    <maven.compiler.release>17</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <!-- 刻意不引入任何第三方依赖：JSON 解析与 HTTP 调用均为 JDK 原生实现 -->
+  <dependencies/>
+
+  <build>
+    <finalName>crewai-java-demo</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.4.1</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>io.example.crew.Main</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
