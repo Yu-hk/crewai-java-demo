@@ -12,6 +12,14 @@
   <name>CrewAI Java Demo</name>
   <description>用纯 JDK 17 实现的 CrewAI 风格多智能体编排最小内核，模型走本地 Ollama</description>
 
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
   <properties>
     <maven.compiler.release>17</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
